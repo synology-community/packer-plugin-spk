@@ -10,7 +10,7 @@ build {
     "source.null.basic-example"
   ]
 
-  provisioner "scaffolding-my-provisioner" {
+  provisioner "synopkg-my-provisioner" {
     mock = "my-mock-config"
   }
 }

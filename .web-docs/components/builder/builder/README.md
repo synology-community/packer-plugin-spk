@@ -1,18 +1,16 @@
-  Include a short description about the builder. This is a good place
-  to call out what the builder does, and any requirements for the given
-  builder environment. See https://www.packer.io/docs/builder/null
+Include a short description about the builder. This is a good place
+to call out what the builder does, and any requirements for the given
+builder environment. See https://www.packer.io/docs/builder/null
 -->
 
-The scaffolding builder is used to create endless Packer plugins using
+The synopkg builder is used to create endless Packer plugins using
 a consistent plugin structure.
-
 
 <!-- Builder Configuration Fields -->
 
 **Required**
 
 - `mock` (string) - The name of the mock to use for the Scaffolding API.
-
 
 <!--
   Optional Configuration Fields
@@ -27,22 +25,20 @@ a consistent plugin structure.
 - `mock_api_url` (string) - The Scaffolding API endpoint to connect to.
   Defaults to https://example.com
 
-
-
 <!--
   A basic example on the usage of the builder. Multiple examples
   can be provided to highlight various build configurations.
 
 -->
+
 ### Example Usage
 
-
 ```hcl
- source "scaffolding" "example" {
+ source "synopkg" "example" {
    mock = "bird"
  }
 
  build {
-   sources = ["source.scaffolding.example"]
+   sources = ["source.synopkg.example"]
  }
 ```

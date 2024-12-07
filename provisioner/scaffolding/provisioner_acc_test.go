@@ -1,7 +1,7 @@
 // Copyright (c) HashiCorp, Inc.
 // SPDX-License-Identifier: MPL-2.0
 
-package scaffolding
+package synopkg
 
 import (
 	_ "embed"
@@ -18,10 +18,10 @@ import (
 //go:embed test-fixtures/template.pkr.hcl
 var testProvisionerHCL2Basic string
 
-// Run with: PACKER_ACC=1 go test -count 1 -v ./provisioner/scaffolding/provisioner_acc_test.go  -timeout=120m
+// Run with: PACKER_ACC=1 go test -count 1 -v ./provisioner/synopkg/provisioner_acc_test.go  -timeout=120m
 func TestAccScaffoldingProvisioner(t *testing.T) {
 	testCase := &acctest.PluginTestCase{
-		Name: "scaffolding_provisioner_basic_test",
+		Name: "synopkg_provisioner_basic_test",
 		Setup: func() error {
 			return nil
 		},
@@ -29,7 +29,7 @@ func TestAccScaffoldingProvisioner(t *testing.T) {
 			return nil
 		},
 		Template: testProvisionerHCL2Basic,
-		Type:     "scaffolding-my-provisioner",
+		Type:     "synopkg-my-provisioner",
 		Check: func(buildCommand *exec.Cmd, logfile string) error {
 			if buildCommand.ProcessState != nil {
 				if buildCommand.ProcessState.ExitCode() != 0 {

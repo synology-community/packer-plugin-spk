@@ -1,4 +1,4 @@
-Type: `scaffolding`
+Type: `synopkg`
 
 <!--
   Include a short description about the builder. This is a good place
@@ -6,7 +6,7 @@ Type: `scaffolding`
   builder environment. See https://www.packer.io/docs/builders/null
 -->
 
-The scaffolding builder is used to create endless Packer plugins using
+The synopkg builder is used to create endless Packer plugins using
 a consistent plugin structure.
 
 
@@ -41,12 +41,12 @@ a consistent plugin structure.
 
 
 ```hcl
- source "scaffolding" "example" {
+ source "synopkg" "example" {
    mock = "bird"
  }
 
  build {
-   sources = ["source.scaffolding.example"]
+   sources = ["source.synopkg.example"]
  }
 ```
 

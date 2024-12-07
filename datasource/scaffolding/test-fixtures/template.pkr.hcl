@@ -1,13 +1,13 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
-data "scaffolding-my-datasource" "test" {
+data "synopkg-my-datasource" "test" {
   mock = "mock-config"
 }
 
 locals {
-  foo = data.scaffolding-my-datasource.test.foo
-  bar = data.scaffolding-my-datasource.test.bar
+  foo = data.synopkg-my-datasource.test.foo
+  bar = data.synopkg-my-datasource.test.bar
 }
 
 source "null" "basic-example" {

@@ -1,4 +1,4 @@
-NAME=scaffolding
+NAME=synopkg
 BINARY=packer-plugin-${NAME}
 
 COUNT?=1

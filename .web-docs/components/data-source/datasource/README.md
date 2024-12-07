@@ -1,18 +1,16 @@
-  Include a short description about the data source. This is a good place
-  to call out what the data source does, and any requirements for the given
-  data source environment. See https://www.packer.io/docs/data-source/amazon-ami
+Include a short description about the data source. This is a good place
+to call out what the data source does, and any requirements for the given
+data source environment. See https://www.packer.io/docs/data-source/amazon-ami
 -->
 
-The scaffolding data source is used to create endless Packer plugins using
+The synopkg data source is used to create endless Packer plugins using
 a consistent plugin structure.
-
 
 <!-- Data source Configuration Fields -->
 
 **Required**
 
 - `mock` (string) - The name of the mock to use for the Scaffolding API.
-
 
 <!--
   Optional Configuration Fields
@@ -26,8 +24,6 @@ a consistent plugin structure.
 
 - `mock_api_url` (string) - The Scaffolding API endpoint to connect to.
   Defaults to https://example.com
-
-
 
 <!--
   A basic example on the usage of the data source. Multiple examples
@@ -48,16 +44,15 @@ a consistent plugin structure.
 
 ### Example Usage
 
-
 ```hcl
-data "scaffolding" "example" {
+data "synopkg" "example" {
    mock = "bird"
  }
- source "scaffolding" "example" {
-   mock = data.scaffolding.example.foo
+ source "synopkg" "example" {
+   mock = data.synopkg.example.foo
  }
 
  build {
-   sources = ["source.scaffolding.example"]
+   sources = ["source.synopkg.example"]
  }
 ```

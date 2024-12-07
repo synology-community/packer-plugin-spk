@@ -35,21 +35,20 @@ The Scaffolding plugin is intended as a starting point for creating Packer plugi
 
 #### Builders
 
-- [builder](/packer/integrations/hashicorp/scaffolding/latest/components/builder/builder-name) - The scaffolding builder is used to create endless Packer
+- [builder](/packer/integrations/hashicorp/synopkg/latest/components/builder/builder-name) - The synopkg builder is used to create endless Packer
   plugins using a consistent plugin structure.
 
 #### Provisioners
 
-- [provisioner](/packer/integrations/hashicorp/scaffolding/latest/components/provisioner/provisioner-name) - The scaffolding provisioner is used to provisioner
+- [provisioner](/packer/integrations/hashicorp/synopkg/latest/components/provisioner/provisioner-name) - The synopkg provisioner is used to provisioner
   Packer builds.
 
 #### Post-processors
 
-- [post-processor](/packer/integrations/hashicorp/scaffolding/latest/components/post-processor/postprocessor-name) - The scaffolding post-processor is used to
-  export scaffolding builds.
+- [post-processor](/packer/integrations/hashicorp/synopkg/latest/components/post-processor/postprocessor-name) - The synopkg post-processor is used to
+  export synopkg builds.
 
 #### Data Sources
 
-- [data source](/packer/integrations/hashicorp/scaffolding/latest/components/datasource/datasource-name) - The scaffolding data source is used to
-  export scaffolding data.
-
+- [data source](/packer/integrations/hashicorp/synopkg/latest/components/datasource/datasource-name) - The synopkg data source is used to
+  export synopkg data.

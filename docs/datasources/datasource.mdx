@@ -1,4 +1,4 @@
-Type: `scaffolding`
+Type: `synopkg`
 
 <!--
   Include a short description about the data source. This is a good place
@@ -6,7 +6,7 @@ Type: `scaffolding`
   data source environment. See https://www.packer.io/docs/datasources/amazon-ami
 -->
 
-The scaffolding data source is used to create endless Packer plugins using
+The synopkg data source is used to create endless Packer plugins using
 a consistent plugin structure.
 
 
@@ -53,15 +53,15 @@ a consistent plugin structure.
 
 
 ```hcl
-data "scaffolding" "example" {
+data "synopkg" "example" {
    mock = "bird"
  }
- source "scaffolding" "example" {
-   mock = data.scaffolding.example.foo
+ source "synopkg" "example" {
+   mock = data.synopkg.example.foo
  }
 
  build {
-   sources = ["source.scaffolding.example"]
+   sources = ["source.synopkg.example"]
  }
 ```
 
